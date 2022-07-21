@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import zy_encrypt_util
 
 class ViewController: UIViewController {
 
@@ -18,6 +19,7 @@ class ViewController: UIViewController {
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
+        ZyEncrypt.encriptar(inputdata: "", pass:"")
     }
 
 }

@@ -30,7 +30,7 @@
 /* Begin PBXFileReference section */
 		000FCC689DBE2D540423A0B1 /* Pods-zy_encrypt_util_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-zy_encrypt_util_Tests.release.xcconfig"; path = "Target Support Files/Pods-zy_encrypt_util_Tests/Pods-zy_encrypt_util_Tests.release.xcconfig"; sourceTree = "<group>"; };
 		34896D421366BE851FD8DF19 /* Pods_zy_encrypt_util_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_zy_encrypt_util_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		457471D9B58479D9FEDE9148 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; name = README.md; path = ../README.md; sourceTree = "<group>"; };
+		457471D9B58479D9FEDE9148 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../README.md; sourceTree = "<group>"; };
 		57AABEFE519E3E80C94CEE49 /* Pods-zy_encrypt_util_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-zy_encrypt_util_Tests.debug.xcconfig"; path = "Target Support Files/Pods-zy_encrypt_util_Tests/Pods-zy_encrypt_util_Tests.debug.xcconfig"; sourceTree = "<group>"; };
 		607FACD01AFB9204008FA782 /* zy_encrypt_util_Example.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = zy_encrypt_util_Example.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		607FACD41AFB9204008FA782 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -43,10 +43,10 @@
 		607FACEA1AFB9204008FA782 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		607FACEB1AFB9204008FA782 /* Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tests.swift; sourceTree = "<group>"; };
 		7EC7D3E59F10050216313503 /* Pods_zy_encrypt_util_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_zy_encrypt_util_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		80CB7539E7D4B705953A5EE0 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
+		80CB7539E7D4B705953A5EE0 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
 		86E84EB50663A62E8DAE5166 /* Pods-zy_encrypt_util_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-zy_encrypt_util_Example.release.xcconfig"; path = "Target Support Files/Pods-zy_encrypt_util_Example/Pods-zy_encrypt_util_Example.release.xcconfig"; sourceTree = "<group>"; };
 		AA4411031C9E715B891DB2C6 /* Pods-zy_encrypt_util_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-zy_encrypt_util_Example.debug.xcconfig"; path = "Target Support Files/Pods-zy_encrypt_util_Example/Pods-zy_encrypt_util_Example.debug.xcconfig"; sourceTree = "<group>"; };
-		D3C342B48D753DD442569E16 /* zy_encrypt_util.podspec */ = {isa = PBXFileReference; includeInIndex = 1; name = zy_encrypt_util.podspec; path = ../zy_encrypt_util.podspec; sourceTree = "<group>"; };
+		D3C342B48D753DD442569E16 /* zy_encrypt_util.podspec */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = zy_encrypt_util.podspec; path = ../zy_encrypt_util.podspec; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -77,7 +77,6 @@
 				57AABEFE519E3E80C94CEE49 /* Pods-zy_encrypt_util_Tests.debug.xcconfig */,
 				000FCC689DBE2D540423A0B1 /* Pods-zy_encrypt_util_Tests.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -227,6 +226,7 @@
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
 			knownRegions = (
+				English,
 				en,
 				Base,
 			);
@@ -291,10 +291,12 @@
 			);
 			inputPaths = (
 				"${PODS_ROOT}/Target Support Files/Pods-zy_encrypt_util_Example/Pods-zy_encrypt_util_Example-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/CryptoSwift/CryptoSwift.framework",
 				"${BUILT_PRODUCTS_DIR}/zy_encrypt_util/zy_encrypt_util.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/CryptoSwift.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/zy_encrypt_util.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -479,6 +481,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = zy_encrypt_util/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				MODULE_NAME = ExampleApp;
 				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.demo.$(PRODUCT_NAME:rfc1034identifier)";
@@ -494,6 +497,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = zy_encrypt_util/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				MODULE_NAME = ExampleApp;
 				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.demo.$(PRODUCT_NAME:rfc1034identifier)";
