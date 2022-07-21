@@ -1,0 +1,13 @@
+use_frameworks!
+
+platform :ios, '10.0'
+
+target 'zy_encrypt_util_Example' do
+  pod 'zy_encrypt_util', :path => '../'
+
+  target 'zy_encrypt_util_Tests' do
+    inherit! :search_paths
+
+    
+  end
+end
